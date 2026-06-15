@@ -3,10 +3,8 @@ CFLAGS ?= -Wall
 
 TARGET = hello
 
-all: $(TARGET)
-
-$(TARGET): hello.c
-	$(CC) $(CFLAGS) hello.c -o $(TARGET)
+all:
+	$(CC) $(CFLAGS) $(LDFLAGS) hello.c -o $(TARGET)
 
 clean:
 	rm -rf $(TARGET)
