@@ -1,13 +1,10 @@
-CC ?= gcc
-CFLAGS ?= -Wall
-
 TARGET = hello
 
 all:
-	$(CC) $(CFLAGS) $(LDFLAGS) hello.c -o $(TARGET)
+	$(CC) $(CFLAGS) $(CPPFLAGS) hello.c -o $(TARGET) $(LDFLAGS)
 
 clean:
-	rm -rf $(TARGET)
+	rm -f $(TARGET)
 
 install:
 	install -d $(DESTDIR)/usr/bin
